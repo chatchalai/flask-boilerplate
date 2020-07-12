@@ -9,5 +9,16 @@ CORS(app)
 def root():
     return "Working"
 
+@app.route('/hello')
+def new_one_function():
+    username = request.args.get('name')
+    print(username)
+    return "chat" + username
+
+@app.route('/mypage')
+def mypage():
+    username = request.args.get("name")
+    return render_template('home.html',name = username)
+
 if __name__ == "__main__":
-    app.run(debug = True, host="0.0.0.0", port=5000)
+    app.run(debug = False, host="0.0.0.0", port=5000).
