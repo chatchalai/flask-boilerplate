@@ -21,4 +21,4 @@ def mypage():
     return render_template('home.html',name = username)
 
 if __name__ == "__main__":
-    app.run(debug = False, host="0.0.0.0", port=5000).
+    app.run(debug = False, host="0.0.0.0", port=5000)
